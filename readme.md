@@ -1,22 +1,20 @@
+# A FGVC Attention Fusion model
+
+
+
+a Attention Fusion model to Combine multiple attentional positions and adjust the spatial coding weights of feature maps.
+
 
 
 ####Basic network structure
 
-![2016724349](/home/yangqiao/Documents/fine_grained/my_code/spatial_model/2016724349.jpg)
+![2016724349](/home/yangqiao/Documents/fine_grained/my_code/fgvc-Attention-Fusion-model/2016724349.jpg)
 
 
 
-global step : 20000
+#### v0.1(2018-6-28 )
 
-train accuracy: 92.5%
-eval accuracy: 76.35%
-
-global step : 45000
-
-train accuracy: 94.88%
-eval accuracy: 79.51%
-
-2018-6-28 1
+**Adjust the scalar of the attention image to match each other**
 
 global step : 45000
 

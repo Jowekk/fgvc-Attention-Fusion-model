@@ -8,7 +8,7 @@ from param import *
 
 import time
 import os
-os.environ["CUDA_VISIBLE_DEVICES"]="1"
+os.environ["CUDA_VISIBLE_DEVICES"]="0"
 slim = tf.contrib.slim
 
 if not os.path.exists(log_dir):
@@ -65,7 +65,7 @@ with tf.Graph().as_default() as graph:
     optimizer_1 = tf.train.AdamOptimizer(learning_rate = lr)
     train_op_1 = slim.learning.create_train_op(loss, optimizer_1 , variables_to_train = first_train_vars)
 
-    optimizer_2 = tf.train.AdamOptimizer(learning_rate = 1e-6)
+    optimizer_2 = tf.train.AdamOptimizer(learning_rate = 1e-4)
     train_op_2 = slim.learning.create_train_op(m_loss, optimizer_2, variables_to_train = second_train_vars)
 
     def train_step(sess, train_op, global_step, flag):
@@ -98,7 +98,7 @@ with tf.Graph().as_default() as graph:
             if step < 1000:
                 loss, _ = train_step(sess, train_op_1, sv.global_step, flag=1)
             else:
-                if (step % 2000) < 2000:
+                if (step % 2000) < 1500:
 
                     loss, _ = train_step(sess, train_op_1, sv.global_step, flag=1)
                 else:

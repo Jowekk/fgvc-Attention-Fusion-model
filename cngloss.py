@@ -45,7 +45,7 @@ def group_loss(net):
 
     div_temp = tf.add(tf.multiply(net[:,:,:,0], diff0), tf.add(tf.multiply(net[:,:,:,1], diff1), tf.add(tf.multiply(net[:,:,:,2], diff2), tf.multiply(net[:,:,:,3], diff3))))
     div_sum = tf.divide(tf.reduce_sum(div_temp, axis=[0,1,2]), batch_size)
-    div_sum = tf.multiply(div_sum, 2)
+    div_sum = tf.multiply(div_sum, 0.2)
 
     d_loss = tf.add(dis_sum, div_sum)
     #d_loss = dis_sum

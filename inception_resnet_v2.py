@@ -279,12 +279,12 @@ def inception_resnet_v2(inputs, num_classes=1001, is_training=True,
                 f_A_and_B = tf.concat([feature_A, feature_B], axis=3)
                 f_A_and_B = tf.reduce_sum(f_A_and_B, axis=3, keep_dims=True)
 
-                group_A = slim.conv2d(group_A, 384, 1, scope='Loca_A_' + str(index) + '_' + str(except_i))
-                group_B = slim.conv2d(group_B, 384, 1, scope='Loca_B_' + str(index) + '_' + str(except_i))             
-                A_multiply_B = tf.multiply(group_A, group_B)
+                group_A = slim.conv2d(group_A, 128, 1, scope='Loca_A_' + str(index) + '_' + str(except_i))
+                group_B = slim.conv2d(group_B, 128, 1, scope='Loca_B_' + str(index) + '_' + str(except_i))             
+                A_multiply_B = tf.multiply(group_A, group_B) 
               
-                A_relative_B = tf.multiply(f_A_and_B, A_multiply_B)
-                A_relative_B = slim.conv2d(A_relative_B, 384, 1, scope='A_B_' + str(index) + '_' + str(except_i))
+                A_relative_B = tf.multiply(f_A_and_B, A_multiply_B) 
+                A_relative_B = slim.conv2d(A_relative_B, 128, 1, scope='A_B_' + str(index) + '_' + str(except_i))
                 loca_list.append(A_relative_B)
         
         net = tf.concat(loca_list, axis=3)

@@ -1,6 +1,6 @@
 #---------------dataset information-------------#
-dataset_dir = './dataset'
-labels_file = './dataset/labels.txt'
+dataset_dir = '../data/dataset'
+labels_file = '../data/dataset/labels.txt'
 file_pattern = 'fgvc_%s.tfrecord'
 image_size = 299
 num_classes = 100
@@ -13,8 +13,8 @@ items_to_descriptions = {
 
 
 #----------------log and checkpoint------------#
-log_dir = './log'
-checkpoint_file = './checkpoints/model.ckpt-0'#'./checkpoints/inception_resnet_v2_2016_08_30.ckpt'
+log_dir = '../data/AF_model/log'
+checkpoint_file = '../data/checkpoints/model.ckpt-0'#'./checkpoints/inception_resnet_v2_2016_08_30.ckpt'
 exclude_list =  ['InceptionResnetV2/Logits', 'InceptionResnetV2/Location', 'InceptionResnetV2/group_map']
 group_vars = 'InceptionResnetV2/group_map'
 
