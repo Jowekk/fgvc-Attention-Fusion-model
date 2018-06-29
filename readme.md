@@ -4,7 +4,7 @@
 
 a Attention Fusion model to Combine multiple attentional positions and adjust the spatial  weights of feature maps.
 
-##Basic network structure
+## Basic network structure
 
 ![](https://github.com/Jowekk/fgvc-Attention-Fusion-model/blob/master/2016724349.jpg)
 
