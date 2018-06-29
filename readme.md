@@ -8,7 +8,7 @@ a Attention Fusion model to Combine multiple attentional positions and adjust th
 
 ####Basic network structure
 
-![2016724349](/home/yangqiao/Documents/fine_grained/my_code/fgvc-Attention-Fusion-model/2016724349.jpg)
+![](https://github.com/Jowekk/fgvc-Attention-Fusion-model/blob/master/2016724349.jpg)
 
 
 
