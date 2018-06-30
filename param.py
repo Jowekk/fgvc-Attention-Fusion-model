@@ -24,11 +24,11 @@ dropout_keep_prob = 0.8
 
 #----------------train information-------------#
 initial_learning_rate = 2e-4
-learning_rate_decay_factor = 0.95
+learning_rate_decay_factor = 0.7
 num_epochs_before_decay = 2
 
 batch_size = 16
-num_epochs = 60000
+num_epochs = 80000
 
 num_batches_per_epoch = int(train_img_num / batch_size)
 num_steps_per_epoch = num_batches_per_epoch 
